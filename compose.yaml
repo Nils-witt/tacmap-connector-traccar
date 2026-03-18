@@ -1,0 +1,6 @@
+services:
+  traccar-connector:
+    build: .
+    env_file:
+      - .env
+    restart: unless-stopped
