@@ -34,10 +34,12 @@ export default class Traccar extends AbstractIngressPlugin {
 
   start(): void {
     logger.info('Traccar plugin started');
+    void this.startWebSocket();
   }
 
   stop(): void {
     logger.info('Traccar plugin stopped');
+    this.socket?.close();
   }
 
   processMessage(data: string) {
