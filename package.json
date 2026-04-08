@@ -10,8 +10,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^25.5.0",
-    "dotenv": "^17.3.1",
-    "typescript": "^5.9.3"
+    "axios": "^1.15.0",
+    "eslint": "^10.2.0",
+    "prettier": "^3.8.1",
+    "request": "^2.88.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.58.1",
+    "winston": "^3.19.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
   }
 }

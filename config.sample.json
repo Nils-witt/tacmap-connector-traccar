@@ -1,0 +1,31 @@
+{
+  "plugins": {
+    "ingress": {
+      "gpsauge": {
+        "username": "",
+        "password": ""
+      }
+    },
+    "egress": {
+      "tacman": {
+        "url": "https://mapservices.example.com/api",
+        "token": "..-"
+      }
+    }
+  },
+  "devices": [
+    {
+      "name": "Device1",
+      "ingress": {
+        "gpsauge": {
+          "id": "2"
+        }
+      },
+      "egress": {
+        "tacman": {
+          "id": "1914"
+        }
+      }
+    }
+  ]
+}
