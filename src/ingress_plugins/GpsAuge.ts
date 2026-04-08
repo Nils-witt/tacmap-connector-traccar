@@ -99,13 +99,15 @@ export default class GpsAuge extends AbstractIngressPlugin {
 
   async fetchEnityPosition(gpsAugeId: number): Promise<unknown> {
     return new Promise((resolve, reject) => {
+      const now = new Date();
+      const timestamp = `${String(now.getDate()).padStart(2, '0')}.${String(now.getMonth() + 1).padStart(2, '0')}.${now.getFullYear()} ${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
       const data = new FormData();
       data.append('module', 'devices');
       data.append('action', 'getonepos');
       data.append('user', this.username);
       data.append('pwd', this.password);
       data.append('format', 'json');
-      data.append('ts', '08.04.2026 17:40:00');
+      data.append('ts', timestamp);
       data.append('deviceid', gpsAugeId.toString());
 
       axios
